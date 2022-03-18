@@ -4,6 +4,7 @@
         "njpwerner.autodocstring",
         "editorconfig.editorconfig",
         "ms-azuretools.vscode-docker",
-        "ms-vscode-remote.remote-containers"
+        "ms-vscode-remote.remote-containers",
+        "ms-python.python"
     ]
 }
