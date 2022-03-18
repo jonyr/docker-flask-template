@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      target: debug
+    container_name: flask_app
+    env_file: .env
+    ports:
+      - 8000:5000
+      - 5678:5678
+    volumes:
+      - .:/home/python/app
+

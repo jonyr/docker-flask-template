@@ -1,0 +1,28 @@
+FROM python:3.9-slim-bullseye as base
+LABEL maintainer="Juan Rabadan <juan@arzion.com>"
+
+RUN apt-get update \
+    && apt-get install -y build-essential curl libpq-dev --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man \
+    && apt-get clean \
+    && useradd --create-home python \
+    && mkdir -p /home/python/app && chown python:python -R /home/python
+
+# set working directory
+WORKDIR /home/python/app
+
+USER python
+
+ADD ./requirements-dev.txt /home/python/app/requirements.txt
+
+RUN python -m venv venv && . /home/python/app/venv/bin/activate
+
+# install requirements
+RUN pip install -r requirements.txt
+
+FROM base as debug
+
+# needed for vscode
+RUN pip install pylint yapf debugpy
+
+CMD python -m debugpy --listen 0.0.0.0:5678 --wait-for-client -m flask run -h 0.0.0.0 -p 5000
