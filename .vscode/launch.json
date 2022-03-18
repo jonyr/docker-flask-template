@@ -5,20 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Attach",
+            "name": "Python: Flask",
             "type": "python",
-            "request": "attach",
-            "connect": {
-                "host": "127.0.0.1",
-                "port": 5678
-            },
-            "pathMappings": [
-                {
-                    "localRoot": "${workspaceFolder}",
-                    "remoteRoot": "/home/python/app"
-                }
+            "request": "launch",
+            "module": "flask",
+            "envFile": "${workspaceFolder}/.env",
+            "args": [
+                "run",
+                "--no-debugger"
             ],
-            // "justMyCode": true
+            "jinja": true,
+            "justMyCode": true
         }
     ]
 }

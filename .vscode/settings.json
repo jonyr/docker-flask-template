@@ -1,0 +1,29 @@
+{
+    "python.formatting.yapfArgs": [],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "venv": true
+    },
+    "[python]": {
+        "editor.formatOnPaste": false,
+        "editor.formatOnSaveMode": "file",
+        "editor.rulers": [
+            80,
+            120
+        ]
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintPath": "/home/python/.local/bin/pylint",
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "python.formatting.provider": "yapf",
+    "editor.formatOnSave": true,
+    "python.linting.pylintEnabled": true,
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ff4081",
+        "titleBar.activeBackground": "#006aff",
+        "titleBar.activeForeground": "#333333"
+    },
+    "window.title": "Flask App",
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.analysis.autoImportCompletions": false
+}

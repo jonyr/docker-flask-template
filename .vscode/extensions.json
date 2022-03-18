@@ -1,5 +1,9 @@
 {
     "recommendations": [
-        "ms-python.python"
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "njpwerner.autodocstring",
+        "editorconfig.editorconfig",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers"
     ]
 }
