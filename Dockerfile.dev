@@ -2,7 +2,7 @@ FROM python:3.9-slim-bullseye as base
 LABEL maintainer="Juan Rabadan <juan@arzion.com>"
 
 RUN apt-get update \
-    && apt-get install -y git build-essential curl libpq-dev --no-install-recommends \
+    && apt-get install -y git ssh-client build-essential curl libpq-dev --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man \
     && apt-get clean \
     && useradd --create-home python \
