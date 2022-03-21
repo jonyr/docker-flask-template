@@ -1,6 +1,8 @@
 # Docker Flask Template
+
 A template project using docker and flask
 
+Create a copy of .env.example and fill all the values and rename it as .env
 
 ## References
 
