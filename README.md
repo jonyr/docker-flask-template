@@ -6,6 +6,15 @@ A template project using docker and flask
 
 Create a copy of .env.example and fill all the values and rename it as .env
 
+## Installing and setting up Docker in Linux
+
+1. Install docker: sudo apt install docker.io
+2. Enable service: sudo systemctl enable docker
+3. Add user permissons: sudo usermod -aG docker $USER
+4. Activate changes to groups: newgrp docker
+5. Reboot your computer
+6. Verify all: docker run hello-world
+
 ## Running the project
 
 1. Using VS Code Run and Debug option.
@@ -14,6 +23,9 @@ Create a copy of .env.example and fill all the values and rename it as .env
 
 ## References
 
+- [Setting up user permissions in Linux](https://docs.docker.com/engine/install/linux-postinstall/)
 - [Developing inside a container](https://code.visualstudio.com/docs/remote/containers)
 - [Debugging Flask app with Docker](https://waqqas.medium.com/debugging-flask-app-within-docker-12edf9321fd7)
 - [docker-compose.yml](https://docs.docker.com/compose/compose-file/compose-file-v3/)
+
+
