@@ -7,7 +7,46 @@
     // Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
     "dockerFile": "../Dockerfile.dev",
     // Set *default* container specific settings.json values on container create.
-    "settings": {},
+    "settings": {
+        "window.title": "Flask Docker Template",
+        "workbench.colorCustomizations": {
+            "editorRuler.foreground": "#ff4081",
+            "titleBar.activeBackground": "#ffff00",
+            "titleBar.activeForeground": "#1f1e1e"
+        },
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash",
+                "overrideName": true
+            }
+        },
+        "python.linting.pylintEnabled": true,
+        "python.venvFolders": [
+            "venv"
+        ],
+        "python.formatting.provider": "yapf",
+        "[python]": {
+            "editor.formatOnSave": true,
+            "editor.rulers": [
+                {
+                    "column": 100,
+                    "color": "#e6ff40"
+                }
+            ]
+        },
+        "files.exclude": {
+            "**/__pycache__": true,
+            "**/*.pyc": true,
+            "venv/": true
+        },
+        "python.linting.enabled": true,
+        "python.linting.lintOnSave": true,
+        "[git-commit]": {
+            "editor.rulers": [
+                50
+            ]
+        }
+    },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
         "ms-vscode-remote.vscode-remote-extensionpack",
