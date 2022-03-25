@@ -2,4 +2,4 @@
 
 source .env
 
-gunicorn -c config/gunicorn.py wsgi:app
+gunicorn -c src/config/gunicorn.py src.app:app
