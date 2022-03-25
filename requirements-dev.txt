@@ -1,4 +1,6 @@
 Flask==2.0.3
+gunicorn==20.1.0
 
+python-dotenv==0.20.0
 pylint==2.12.2
 yapf==0.32.0
