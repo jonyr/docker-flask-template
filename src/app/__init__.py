@@ -1,6 +1,10 @@
-from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+from flask import render_template, url_for
+
+from .factory import create_app
+
+app = create_app(os.getenv('FLASK_ENV', 'development'))
 
 
 @app.route("/")
