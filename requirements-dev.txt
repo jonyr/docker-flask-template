@@ -12,7 +12,7 @@ marshmallow-sqlalchemy==0.28.0  # SQLAlchemy integration with the marshmallow (d
 
 boto3==1.21.27                  # AWS sdk for python
 gunicorn==20.1.0                # WSGI HTTP Server for UNIX
-
+psycopg2-binary==2.9.3          # Python-PostgreSQL Database Adapter
 
 python-dotenv==0.20.0
 pylint==2.12.2
