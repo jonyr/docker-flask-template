@@ -14,19 +14,24 @@
             "titleBar.activeBackground": "#ffff00",
             "titleBar.activeForeground": "#1f1e1e"
         },
+        "window.zoomLevel": 2,
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
         "terminal.integrated.profiles.linux": {
             "bash": {
                 "path": "/bin/bash",
                 "overrideName": true
             }
         },
-        "python.linting.pylintEnabled": true,
         "python.venvFolders": [
             "venv"
         ],
         "python.formatting.provider": "yapf",
         "[python]": {
             "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": true,
+            },
             "editor.rulers": [
                 {
                     "column": 100,
@@ -40,7 +45,7 @@
             "venv/": true
         },
         "python.linting.enabled": true,
-        "python.linting.lintOnSave": true,
+        "python.linting.pylintEnabled": true,
         "[git-commit]": {
             "editor.rulers": [
                 50
@@ -49,12 +54,13 @@
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
         "ms-vscode-remote.vscode-remote-extensionpack",
         "njpwerner.autodocstring",
         "editorconfig.editorconfig",
         "ms-azuretools.vscode-docker",
         "ms-vscode-remote.remote-containers",
-        "ms-python.python"
     ]
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
