@@ -1,4 +1,4 @@
-# Docker Flask Template
+# Dockerizing a Flask application
 
 A template project using docker and flask
 
