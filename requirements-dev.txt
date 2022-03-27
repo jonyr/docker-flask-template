@@ -1,5 +1,18 @@
-Flask==2.0.3
-gunicorn==20.1.0
+Flask==2.0.3                    # A simple framework for building complex web applications.
+SQLAlchemy==1.4.32              # Database Abstraction Library. The Python SQL Toolkit and ORM
+marshmallow==3.15.0             # A library for converting complex datatypes to and from native Python datatypes.
+
+
+Flask-SQLAlchemy==2.5.1         # Adds SQLAlchemy support to your Flask application.
+Flask-Cors==3.0.10              # A Flask extension adding a decorator for CORS support
+Flask-Migrate==3.1.0            # SQLAlchemy database migrations for Flask applications using Alembic.
+Flask-JWT-Extended==4.3.1       # JWT token authentication for Flask apps
+flask-marshmallow==0.14.0       # Flask + marshmallow for beautiful APIs
+marshmallow-sqlalchemy==0.28.0  # SQLAlchemy integration with the marshmallow (de)serialization library
+
+boto3==1.21.27                  # AWS sdk for python
+gunicorn==20.1.0                # WSGI HTTP Server for UNIX
+
 
 python-dotenv==0.20.0
 pylint==2.12.2
