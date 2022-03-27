@@ -1,3 +1,4 @@
+import datetime
 import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -21,10 +22,22 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
 
+    # Json Web Tokens
+    JWT_ACCESS_TOKEN_EXPIRES = datetime.timedelta(hours=2)
+    JWT_REFRESH_TOKEN_EXPIRES = datetime.timedelta(days=30)
+    JWT_ERROR_MESSAGE_KEY = 'description'
 
 class DevelopmentConfig(Config):
     FLASK_ENV = 'development'
     DEBUG = True
+
+    LOG_LEVEL = 'DEBUG'
+
+    # SQL Alchemy Settings
+    SQLALCHEMY_ECHO = False
+
+    # Flask Cors
+    CORS_ORIGINS = '*'
 
 
 class TestingConfig(Config):
